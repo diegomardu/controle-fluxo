@@ -14,14 +14,14 @@ public class Contador {
 			contar(parametroUm, parametroDois);
 		
 		}catch (ParametrosInvalidosException exception) {
-			System.out.println("O segundo parâmetro deve ser maior que o primeiro");
+			System.out.println(exception.getMessage());
 		}
 		
 	}
 	static void contar(int parametroUm, int parametroDois ) throws ParametrosInvalidosException {
 		
 		if(parametroUm > parametroDois) {
-			throw new ParametrosInvalidosException();
+			throw new ParametrosInvalidosException("O segundo parâmetro deve ser maior que o primeiro");
 		}
 		int contagem = parametroDois - parametroUm;
 		
